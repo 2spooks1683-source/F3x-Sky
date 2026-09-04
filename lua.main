@@ -3,6 +3,7 @@
  
     RequestCommand:InvokeServer(":btools me")
     RequestCommand:InvokeServer(":fogcolor black")
+    RequestCommand:InvokeServer(":time 0")
     wait(0.05)
         local player = game.Players.LocalPlayer
     local char = player.Character
@@ -253,7 +254,7 @@
         e = char.HumanoidRootPart.CFrame.x
         f = char.HumanoidRootPart.CFrame.y
         g = char.HumanoidRootPart.CFrame.z
-        CreatePart(CFrame.new(math.floor(e),math.floor(f),math.floor(g)) + Vector3.new(0,6,0),workspace)
+        CreatePart(CFrame.new(math.floor(e),math.floor(f),math.floor(g)) + Vector3.new(0,-3,0),workspace)
         for i,v in game.Workspace:GetDescendants() do
             if v:IsA("BasePart") and v.CFrame.x == math.floor(e) and v.CFrame.z == math.floor(g) then
                 --spawn(function()
@@ -264,7 +265,7 @@
                 SetMesh(v,"111891702759441")
                 SetTexture(v,id)
                 --end)
-                MeshResize(v,Vector3.new(7000,7000,7000))
+                MeshResize(v,Vector3.new(20000,20000,20000))
                 SetLocked(v,true)
             end
         end
